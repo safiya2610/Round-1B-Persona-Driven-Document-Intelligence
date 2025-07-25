@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "input_documents": [
+      "business_report.pdf"
+    ],
+    "persona": "Marketing Manager",
+    "job_to_be_done": "Analyze the marketing plan and sales performance to create an action plan for Q3.",
+    "processing_timestamp": "2025-07-25T22:07:37.582706"
+  },
+  "extracted_sections": [
+    {
+      "document": "business_report.pdf",
+      "page_number": 1,
+      "section_title": "- Objective: Increase brand awareness by 30% in Q3.",
+      "importance_rank": 1
+    }
+  ],
+  "sub_section_analysis": [
+    {
+      "document": "business_report.pdf",
+      "refined_text": "- Objective: Increase brand awareness by 30% in Q3.",
+      "page_number": 1
+    }
+  ]
+}

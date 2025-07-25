@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Analyzer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://giffiles.alphacoders.com/215/215985.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+      padding: 30px;
+      margin-top: 50px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      width: 800px;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: -30%;
+      width: 160%;
+      height: 160%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%);
+      pointer-events: none;
+      transform: rotate(0deg);
+    }
+
+    .container * {
+      position: relative;
+      z-index: 1;
+    }
+
+    label, h2 {
+      color: #fff;
+    }
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+    }
+
+    .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form-control:focus {
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+      box-shadow: none;
+    }
+
+    .glass-btn {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(30px) saturate(180%);
+      -webkit-backdrop-filter: blur(30px) saturate(180%);
+      color: #ffffffcc;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .glass-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    /* Stylish file input */
+    .file-upload-wrapper {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px) saturate(180%);
+    }
+
+    .file-upload-wrapper input[type="file"] {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .file-upload-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffffcc;
+      font-size: 16px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Persona-Driven Document Analyzer</h2>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="persona" class="form-label" style="color: #fff;font-size: larger;">Persona</label>
+        <input type="text" class="form-control" name="persona" required>
+      </div>
+      <div class="mb-3">
+        <label for="job" class="form-label" style="color: #fff;font-size: larger;">Job to be Done</label>
+        <input type="text" class="form-control" name="job" required>
+      </div>
+      <div class="mb-3">
+        <label for="pdfs" class="form-label" style="color: #fff;font-size: larger;">Upload PDFs</label>
+        <div class="file-upload-wrapper">
+          <input type="file" name="pdfs" multiple required accept=".pdf" onchange="updateFileName(this)">
+          <div class="file-upload-text" id="file-upload-label">Choose PDFs</div>
+        </div>
+      </div>
+      <button type="submit" class="glass-btn" style="justify-content: center;display: flex;">Analyze</button>
+    </form>
+  </div>
+
+  <script>
+    function updateFileName(input) {
+      const label = document.getElementById('file-upload-label');
+      if (input.files.length > 1) {
+        label.textContent = `${input.files.length} files selected`;
+      } else if (input.files.length === 1) {
+        label.textContent = input.files[0].name;
+      } else {
+        label.textContent = 'Choose PDFs';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+flask
+PyMuPDF==1.23.7
+sentence-transformers==2.2.2
+scikit-learn
+numpy
