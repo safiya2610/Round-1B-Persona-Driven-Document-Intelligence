@@ -30,29 +30,40 @@ git clone https://github.com/safiya2610/Round-1B-Persona-Driven-Document-Intelli
 cd Round-1B-Persona-Driven-Document-Intelligence
 ```
 
-2. Create a Virtual Environment (optional but recommended)
+### 2. Create a Virtual Environment 
 ```bash
 python -m venv venv
 venv\Scripts\activate     # For Windows
 # source venv/bin/activate  # For macOS/Linux
 ```
-3. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-5. Run Locally
+### 4. Run Locally
 ```bash
 python app.py
 ```
 Open browser: http://localhost:5000
 
-Docker Support
-1. Build Docker Image
+## Docker Support
+### 1. Build Docker Image
 ```bash
 docker build -t persona-analyzer .
 ```
-2. Run Container
+### 2. Run Container
 ```bash
 docker run -p 5000:5000 persona-analyzer
 ```
+
+## Architecture
+```css
+[Documents] → [Text Extractor] → [Chunker] → [Vector Embedding] → [Search & Ranking]
+Persona + Job → [Intent Extractor] → [Query Embedding] → [Ranking Engine]
+→ [Summarizer] → [Output Dashboard]
+```
+
+![WhatsApp Image 2025-07-26 at 17 39 48_6d03d45e](https://github.com/user-attachments/assets/7c9f8420-be4f-4a73-89c5-2ffd3215b627)
+
+
 
