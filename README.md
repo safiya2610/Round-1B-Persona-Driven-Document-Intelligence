@@ -1,6 +1,10 @@
 # Round 1B: Persona-Driven Document Intelligence 🚀
 
 This project analyzes multiple PDF documents and ranks the most relevant sections and subsections based on a provided **persona** and **job-to-be-done**. 
+---
+## Demo Video
+https://drive.google.com/file/d/1jpOsBuaNz_gqc2lthF8Q-l9coFJModkZ/view?usp=sharing
+---
 ## Objective
 
 Given a **persona** and a **job**, the system:
