@@ -64,6 +64,7 @@ Persona + Job → [Intent Extractor] → [Query Embedding] → [Ranking Engine]
 → [Summarizer] → [Output Dashboard]
 ```
 
+## Clean and responsive UI
 ![WhatsApp Image 2025-07-26 at 17 39 48_6d03d45e](https://github.com/user-attachments/assets/7c9f8420-be4f-4a73-89c5-2ffd3215b627)
 
 
