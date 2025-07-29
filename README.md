@@ -19,6 +19,8 @@ Given a **persona** and a **job**, the system:
 - Clean HTML frontend with glassmorphic design.
 
 ---
+## Architecture diagram
+<img width="1024" height="800" alt="image" src="https://github.com/user-attachments/assets/0ec46ba5-4a5d-4b34-a860-fec8c5e1bce7" />
 
 ## Setup Instructions
 
