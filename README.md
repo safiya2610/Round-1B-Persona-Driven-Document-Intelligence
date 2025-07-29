@@ -1,7 +1,6 @@
 # Round 1B: Persona-Driven Document Intelligence 🚀
 
-This project analyzes multiple PDF documents and ranks the most relevant sections and subsections based on a provided **persona** and **job-to-be-done**. It is built for **Adobe India Hackathon 2025 – Connecting the Dots**, Round 1B.
-
+This project analyzes multiple PDF documents and ranks the most relevant sections and subsections based on a provided **persona** and **job-to-be-done**. 
 ## Objective
 
 Given a **persona** and a **job**, the system:
